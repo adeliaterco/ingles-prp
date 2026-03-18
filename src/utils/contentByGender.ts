@@ -1,28 +1,28 @@
 import { QuizData } from '../types/quiz';
 
 // 
-// GENDER PERSONALIZATION FUNCTIONS
+// FUNÇÕES DE PERSONALIZAÇÃO POR GÊNERO
 // 
 
 export function getTitle(gender: string): string {
     return gender === 'HOMBRE' 
-        ? 'Why She Left' 
-        : 'Why He Left';
+        ? 'Por Qué Ella Se Fue' 
+        : 'Por Qué Él Se Fue';
 }
 
 export function getLoadingMessage(gender: string): string {
     return gender === 'HOMBRE'
-        ? 'Generating your specific protocol to win her back...'
-        : 'Generating your specific protocol to win him back...';
+        ? 'Generando tu protocolo específico para reconquistar a ella...'
+        : 'Generando tu protocolo específico para reconquistar a él...';
 }
 
 /**
- * CHANGE #6: Ultra-Personalized Diagnosis
- * Transforms quiz data into an authority and empathy narrative.
+ * ALTERAÇÃO #6: Diagnóstico Ultra-Personalizado
+ * Transforma os dados do quiz em una narrativa de autoridade e empatia.
  */
 export function getCopy(quizData: QuizData): string {
-    const pronoun = quizData.gender === 'HOMBRE' ? 'her' : 'him';
-    const exPronoun = quizData.gender === 'HOMBRE' ? 'She' : 'He';
+    const pronoun = quizData.gender === 'HOMBRE' ? 'ella' : 'él';
+    const exPronoun = quizData.gender === 'HOMBRE' ? 'Ella' : 'Él';
     
     const whoEnded = quizData.whoEnded || '';
     const timeSeparation = quizData.timeSeparation || '';
@@ -30,56 +30,56 @@ export function getCopy(quizData: QuizData): string {
     const reason = quizData.reason || '';
 
     // 
-    // 1. INTRODUCTION LOGIC (WHO ENDED) - CORRECTED
+    // 1. LÓGICA DE INTRODUÇÃO (QUEM TERMINOU) - CORRIGIDA
     // 
     let intro = '';
     
-    // Case 1: SHE/HE ENDED IT
+    // Caso 1: ELA/ELE TERMINOU
     if (whoEnded.includes('ELLA TERMINÓ') || whoEnded.includes('ÉL TERMINÓ')) {
-        intro = `Based on the fact that ${exPronoun} decided to end the relationship, we understand that there was wear and tear on the "value switches" that ${pronoun} perceived in you. `;
+        intro = `Basado en que ${exPronoun} decidió terminar la relación, entendemos que hubo un desgaste en los "interruptores de valor" que ${pronoun} percibía en ti. `;
     } 
-    // Case 2: I ENDED IT
+    // Caso 2: EU TERMINEI
     else if (whoEnded.includes('YO TERMINÉ')) {
-        intro = `Considering that you were the one who ended it, the challenge now is to reverse the feeling of rejection that ${pronoun} processed, transforming it into a new opportunity. `;
+        intro = `Considerando que fuiste tú quien terminó, el desafío ahora es revertir el sentimiento de rechazo que ${pronoun} procesó, transformándolo en una nueva oportunidad. `;
     }
-    // Case 3: MUTUAL DECISION
+    // Caso 3: DECISÃO MÚTUA
     else if (whoEnded.includes('DECISIÓN MUTUA')) {
-        intro = `Considering that the decision was mutual, the challenge now is to identify if there is still genuine interest from both sides and rebuild attraction from scratch. `;
+        intro = `Considerando que la decisión fue mutua, el desafío ahora es identificar si aún existe interés genuino de ambas partes y reconstruir la atracción desde cero. `;
     }
-    // Case 4: FALLBACK (unexpected value or empty)
+    // Caso 4: FALLBACK (valor inesperado ou vazio)
     else {
-        intro = `Considering the context of the breakup, the challenge now is to understand the emotional dynamics that led to this point and reverse them strategically. `;
+        intro = `Considerando el contexto de la ruptura, el desafío ahora es comprender las dinámicas emocionales que llevaron a este punto y revertirlas estratégicamente. `;
     }
 
     // 
-    // 2. URGENCY LOGIC (SEPARATION TIME) - IMPROVED
+    // 2. LÓGICA DE URGÊNCIA (TEMPO DE SEPARAÇÃO) - MELHORADA
     // 
     let urgency = '';
     if (timeSeparation.includes('MENOS DE 1 SEMANA') || timeSeparation.includes('1-4 SEMANAS')) {
-        urgency = `You're in the **IDEAL time window**. ${exPronoun}'s brain still has chemical traces of your presence, which facilitates reconnection if you act now. `;
+        urgency = `Estás en la **ventana de tiempo IDEAL**. El cerebro de ${pronoun} aún tiene rastros químicos de tu presencia, lo que facilita la reconexión si actúas ahora. `;
     } else if (timeSeparation.includes('1-6 MESES')) {
-        urgency = `Although time has passed (${timeSeparation}), neuroscience explains that emotional memories can be reactivated through the right stimuli. `;
+        urgency = `Aunque ha pasado tiempo (${timeSeparation}), la neurociencia explica que las memorias emocionales pueden ser reactivadas mediante los estímulos correctos. `;
     } else if (timeSeparation.includes('MÁS DE 6 MESES')) {
-        urgency = `Although time has passed (${timeSeparation}), neuroscience explains that emotional memories can be reactivated through the right stimuli. `;
+        urgency = `Aunque ha pasado tiempo (${timeSeparation}), la neurociencia explica que las memorias emocionales pueden ser reactivadas mediante los estímulos correctos. `;
     }
 
     // 
-    // 3. CONTACT LOGIC (CURRENT SITUATION) - IMPROVED
+    // 3. LÓGICA DE CONTATO (SITUAÇÃO ATUAL) - MELHORADA
     // 
     let insight = '';
     if (currentSituation.includes('CONTACTO CERO') || currentSituation.includes('ME IGNORA') || currentSituation.includes('BLOQUEADO')) {
-        insight = `The fact that there is no contact is, ironically, your biggest advantage. We're in the "cortisol peak cleanup" phase, preparing the ground for an impactful return. `;
+        insight = `El hecho de que no haya contacto es, irónicamente, tu mayor ventaja. Estamos en la fase de "limpieza de picos de cortisol", preparando el terreno para un regreso impactante. `;
     } else {
-        insight = `Current contact indicates that the emotional thread hasn't been cut, but we must be careful not to saturate their dopamine system with desperation. `;
+        insight = `El contacto actual indica que el hilo emocional no se ha cortado, pero debemos tener cuidado de no saturar su sistema de dopamina con desesperación. `;
     }
 
-    // 4. Reason for Breakup
+    // 4. Motivo da Ruptura
     let reasonInsight = '';
     if (reason) {
-        reasonInsight = `By analyzing that the main reason was "${reason}", the protocol will focus on neutralizing that specific objection in ${pronoun}'s subconscious. `;
+        reasonInsight = `Al analizar que el motivo principal fue "${reason}", el protocolo se enfocará en neutralizar esa objeción específica en el subconsciente de ${pronoun}. `;
     }
 
-    return `It wasn't due to lack of love.
+    return `No fue por falta de amor.
 
 ${intro}
 
@@ -89,93 +89,93 @@ ${insight}
 
 ${reasonInsight}
 
-The key is not to beg, but to understand ${pronoun}'s psychology and act strategically. In the next step, I'm going to reveal EXACTLY the scientific step-by-step process for ${pronoun} to feel that YES, you are the right person.`;
+La clave no es rogar, sino entender la psicología de ${pronoun} y actuar de forma estratégica. En el siguiente paso, voy a revelar EXACTAMENTE el paso a paso científico para que ${pronoun} sienta que SÍ eres la persona correcta.`;
 }
 
-// ✅ INSTRUCTION #9: Quick summary + Instruction #6: Explanation of importance
+// ✅ INSTRUÇÃO #9: Sumário rápido + Instrução #6: Explicação da importância
 export function getVentana72Copy(gender: string): string {
-    const pronoun = gender === 'HOMBRE' ? 'her' : 'him';
+    const pronoun = gender === 'HOMBRE' ? 'ella' : 'él';
     
-    return `It doesn't matter if you separated 3 days ago or 3 months ago.
+    return `No importa si se separaron hace 3 días o hace 3 meses.
 
-Here's the truth that behavioral psychologists discovered:
+Aquí está la verdad que los psicólogos comportamentales descubrieron:
 
-The human brain operates in 72-hour cycles.
+El cerebro humano opera en ciclos de 72 horas.
 
-Every time you take a STRATEGIC ACTION, ${pronoun}'s brain enters a new 72-hour cycle where everything can change.
-
-—
-
-Here's what's crucial:
-
-In each of these 3 phases, there are CORRECT and INCORRECT actions.
-
-✅ If you act correctly in each phase, ${pronoun} seeks you out.
-
-❌ If you act incorrectly, their brain erases the attraction.
+Cada vez que tú tomas una ACCIÓN ESTRATÉGICA, el cerebro de ${pronoun} entra en un nuevo ciclo de 72 horas donde todo puede cambiar.
 
 —
 
-Your personalized plan reveals EXACTLY what to do in each phase.`;
+Aquí está lo crucial:
+
+En cada una de estas 3 fases, hay acciones CORRECTAS e INCORRECTAS.
+
+✅ Si actúas correcto en cada fase, ${pronoun} te busca.
+
+❌ Si actúas incorrecto, su cerebro borra la atracción.
+
+—
+
+Tu plan personalizado revela EXACTAMENTE qué hacer en cada fase.`;
 }
 
-// ✅ NEW: Quick summary of the 3 phases (Instruction #9)
+// ✅ NOVO: Sumário rápido das 3 fases (Instrução #9)
 export function getVentanaSummary(gender: string): string[] {
     return [
-        '🎯 Phase 1: Activate curiosity and break expectations',
-        '💡 Phase 2: Restore perceived value without pressure',
-        '❤️ Phase 3: Create opportunity for emotional reconnection'
+        '🎯 Fase 1: Activar curiosidad y romper expectativas',
+        '💡 Fase 2: Restaurar valor percibido sin presión',
+        '❤️ Fase 3: Crear oportunidad de reconexión emocional'
     ];
 }
 
-// ✅ NEW: Explanation of importance (Instruction #6)
+// ✅ NOVO: Explicação da importância (Instrução #6)
 export function getVentanaImportance(): string[] {
     return [
-        '🔬 Backed by behavioral neuroscience',
-        '⏰ Each 72h cycle rewrites emotional memories',
-        '🎯 Acting correctly = renewed attraction',
-        '⚠️ Acting incorrectly = definitive emotional closure'
+        '🔬 Respaldado por neurociencia del comportamiento',
+        '⏰ Cada ciclo de 72h reescribe memorias emocionales',
+        '🎯 Actuar correcto = atracción renovada',
+        '⚠️ Actuar incorrecto = cierre emocional definitivo'
     ];
 }
 
 export function getOfferTitle(gender: string): string {
     return gender === 'HOMBRE'
-        ? 'Your Plan to Win Her Back'
-        : 'Your Plan to Win Him Back';
+        ? 'Tu Plan para Reconquistar a Ella'
+        : 'Tu Plan para Reconquistar a Él';
 }
 
 export function getFeatures(gender: string): string[] {
-    const pronoun = gender === 'HOMBRE' ? 'Her' : 'Him';
-    const pronounLower = gender === 'HOMBRE' ? 'her' : 'him';
-    const another = gender === 'HOMBRE' ? 'another' : 'another';
+    const pronoun = gender === 'HOMBRE' ? 'Ella' : 'Él';
+    const pronounLower = gender === 'HOMBRE' ? 'ella' : 'él';
+    const another = gender === 'HOMBRE' ? 'otro' : 'otra';
     
     return [
-        `📱 MODULE 1: How to Talk to ${pronoun} (Days 1-7)`,
-        `👥 MODULE 2: How to Meet ${pronoun} (Days 8-14)`,
-        `❤️ MODULE 3: How to Win ${pronounLower} Back (Days 15-21)`,
-        `🚨 MODULE 4: Emergency Protocol (If ${pronounLower} is with someone else)`,
-        '⚡ Special Guide: The 3 Phases of 72 Hours',
-        '🎯 Bonuses: Conversation Scripts + Action Plans',
-        '✅ Guarantee: 30 days or your money back'
+        `📱 MÓDULO 1: Cómo Hablar Con ${pronoun} (Días 1-7)`,
+        `👥 MÓDULO 2: Cómo Encontrarte Con ${pronoun} (Días 8-14)`,
+        `❤️ MÓDULO 3: Cómo Reconquistar${pronounLower === 'ella' ? 'la' : 'lo'} (Días 15-21)`,
+        `🚨 MÓDULO 4: Protocolo de Emergencia (Si ${pronounLower} está con ${another})`,
+        '⚡ Guía especial: Las 3 Fases de 72 Horas',
+        '🎯 Bonos: Scripts de conversación + Planes de acción',
+        '✅ Garantía: 30 días o tu dinheiro de vuelta'
     ];
 }
 
 export function getCTA(gender: string): string {
     return gender === 'HOMBRE'
-        ? 'YES, I WANT MY PLAN TO WIN HER BACK'
-        : 'YES, I WANT MY PLAN TO WIN HIM BACK';
+        ? 'SÍ, QUIERO MI PLAN PARA RECONQUISTAR A ELLA'
+        : 'SÍ, QUIERO MI PLAN PARA RECONQUISTAR A ÉL';
 }
 
 export function getCompletionBadge(gender: string): { title: string; subtitle: string } {
-    const pronoun = gender === 'HOMBRE' ? 'her' : 'him';
+    const pronoun = gender === 'HOMBRE' ? 'ella' : 'él';
     
     return {
-        title: 'YOUR ANALYSIS IS READY!',
-        subtitle: `Discover exactly why ${pronoun} left and the scientific step-by-step process for ${pronoun} to WANT to come back`
+        title: '¡TU ANÁLISIS ESTÁ LISTO!',
+        subtitle: `Descubre exactamente por qué ${pronoun} se fue y el paso a paso científico para que ${pronoun} QUIERA volver`
     };
 }
 
-// ✅ REFACTORED: Now returns structured object (Instructions #2, #3, #8)
+// ✅ REFATORADO: Agora retorna objeto estruturado (Instruções #2, #3, #8)
 export function getFaseText(gender: string, fase: number): { 
     title: string; 
     timeRange: string;
@@ -183,48 +183,48 @@ export function getFaseText(gender: string, fase: number): {
     bullets: string[];
     warning: string;
 } {
-    const pronoun = gender === 'HOMBRE' ? 'She' : 'He';
-    const pronounLower = gender === 'HOMBRE' ? 'her' : 'him';
-    const oppositeGender = gender === 'HOMBRE' ? 'him' : 'her';
+    const pronoun = gender === 'HOMBRE' ? 'Ella' : 'Él';
+    const pronounLower = gender === 'HOMBRE' ? 'ella' : 'él';
+    const oppositeGender = gender === 'HOMBRE' ? 'él' : 'ella';
     
     const fases: Record<number, { title: string; timeRange: string; summary: string; bullets: string[]; warning: string }> = {
         1: {
-            title: 'Curiosity Activation',
-            timeRange: '0-24 HOURS',
-            summary: `${pronoun} receives the first signal that something has changed in you and their brain activates "curiosity mode"`,
+            title: 'Activación de Curiosidad',
+            timeRange: '0-24 HORAS',
+            summary: `${pronoun} recibe la primera señal de que algo cambió en ti y su cerebro activa el "modo curiosidad"`,
             bullets: [
-                `✨ ${pronoun} abandons the "post-breakup relief" mode`,
-                '🧠 Their brain detects changes in your behavior',
-                `💭 They start wondering: "What's happening with ${oppositeGender}?"`,
-                '🔄 The neurological curiosity circuit is activated'
+                `✨ ${pronoun} abandona el "modo alivio" post-ruptura`,
+                '🧠 Su cerebro detecta cambios en tu comportamiento',
+                `💭 Empieza a preguntarse: "¿Qué está pasando con ${oppositeGender}?"`,
+                '🔄 Se activa el circuito de curiosidad neurológica'
             ],
-            warning: `⚠️ If you act incorrectly here, you confirm that ${pronounLower} made the right decision`
+            warning: `⚠️ Si actúas incorrectamente aquí, confirmas que ${pronounLower} tomó la decisión correcta`
         },
         
         2: {
-            title: 'Restoration of Perceived Value',
-            timeRange: '24-48 HOURS',
-            summary: `${pronoun} starts to reevaluate archived memories and oxytocin is reactivated`,
+            title: 'Restauración de Valor Percibido',
+            timeRange: '24-48 HORAS',
+            summary: `${pronoun} empieza a reevaluar las memorias archivadas y la oxitocina se reactiva`,
             bullets: [
-                `🧬 Oxytocin (the bonding hormone) becomes active again`,
-                `💫 The good moments that ${pronounLower} had "forgotten" return to their mind`,
-                '🎭 Their brain reconstructs your image in a more positive way',
-                '🔓 Emotional defenses start to weaken'
+                `🧬 La oxitocina (hormona del apego) vuelve a activarse`,
+                `💫 Los buenos momentos que ${pronounLower} había "olvidado" regresan a su mente`,
+                '🎭 Su cerebro reconstruye tu imagen de forma más positiva',
+                '🔓 Las defensas emocionales empiezan a debilitarse'
             ],
-            warning: `⚠️ If you push too hard, ${pronounLower} closes the cycle and blocks you permanently`
+            warning: `⚠️ Si presionas demasiado, ${pronounLower} cierra el ciclo y te bloquea definitivamente`
         },
         
         3: {
-            title: 'Strategic Reconnection',
-            timeRange: '48-72 HOURS',
-            summary: `${pronoun} feels the need to "close the emotional loop" and here you reappear with the Protocol`,
+            title: 'Reconexión Estratégica',
+            timeRange: '48-72 HORAS',
+            summary: `${pronoun} siente la necesidad de "cerrar el ciclo" emocionalmente y aquí reapareces con el Protocolo`,
             bullets: [
-                `🎯 ${pronoun} seeks a definitive emotional resolution`,
-                '💝 Latent attachment seeks conscious expression',
-                '🚪 This is where you reappear strategically',
-                '⚡ Critical moment to apply the Reconnection Protocol'
+                `🎯 ${pronoun} busca una resolución emocional definitiva`,
+                '💝 El apego latente busca expresión consciente',
+                '🚪 Aquí es donde tú reapareces de forma estratégica',
+                '⚡ Momento crítico para aplicar el Protocolo de Reconexión'
             ],
-            warning: '⚠️ 87% of people lose their ex in this phase by not knowing what to do'
+            warning: '⚠️ 87% de las personas pierden a su ex en esta fase por no saber qué hacer'
         }
     };
     
