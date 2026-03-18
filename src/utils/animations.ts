@@ -8,7 +8,7 @@ export const typewriterEffect = (
   element.textContent = '';
 
   const interval = setInterval(() => {
-    if (index &lt; text.length) {
+    if (index < text.length) {
       element.textContent += text.charAt(index);
       index++;
     } else {
