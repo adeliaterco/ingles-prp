@@ -67,14 +67,14 @@ export default function Landing({ onNavigate }: LandingProps) {
                         ======================================== */}
                     <h1 className="headline-simple">
                         <span className="headline-text">
-                            El silencio de tu ex <span className="highlight-orange">no significa que sea tarde</span>.<br />
-                            Pero cada día que pasa, <span className="highlight-orange">se vuelve más difícil</span>.
+                            Your ex's silence <span className="highlight-orange">doesn't mean it's too late</span>.<br />
+                            But every day that passes, <span className="highlight-orange">it gets harder</span>.
                         </span>
                     </h1>
 
                     {/* ✅ SUB - NOVO ELEMENTO */}
                     <p className="subtitle-simple">
-                        Responde 7 preguntas y te digo el <strong>próximo paso exacto</strong> para que ella vuelva a verte.
+                        Answer 7 questions and I'll tell you the <strong>exact next step</strong> to make her see you again.
                     </p>
 
                     {/* CTA GRANDE COM ANIMAÇÃO DE PULSAÇÃO */}
@@ -82,7 +82,7 @@ export default function Landing({ onNavigate }: LandingProps) {
                         <button className="cta-button-simple" onClick={handleCTAClick}>
                             <span className="cta-glow"></span>
                             <span className="cta-icon">⏰</span>
-                            <span className="cta-text">DESCUBRIR SI AÚN HAY TIEMPO</span>
+                            <span className="cta-text">FIND OUT IF THERE'S STILL TIME</span>
                         </button>
                     </div>
 
@@ -91,7 +91,7 @@ export default function Landing({ onNavigate }: LandingProps) {
                 {/* FOOTER MINIMALISTA */}
                 <footer className="landing-footer-simple">
                     <p className="disclaimer-simple">
-                        🔒 Anónimo • 2 minutos • Sin juicio • Sin email
+                        🔒 Anonymous • 2 minutes • No judgment • No email
                     </p>
                 </footer>
             </div>

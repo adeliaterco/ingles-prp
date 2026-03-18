@@ -34,87 +34,87 @@ interface Question {
 const QUESTIONS: Question[] = [
   {
     id: 1,
-    text: 'Para calibrar el análisis, necesito saber: ¿cuál es tu género?',
+    text: 'To calibrate the analysis, I need to know: what is your gender?',
     options: ['HOMBRE', 'MUJER'],
-    response: 'Entendido.',
+    response: 'Understood.',
     responseByGender: {
-      HOMBRE: 'Perfecto. Voy a calibrar el análisis basado en los patrones específicos de comportamiento femenino después de una ruptura. Cada respuesta que des me ayudará a entender exactamente qué está pasando con ella.',
-      MUJER: 'Perfecto. Voy a calibrar el análisis basado en los patrones específicos de comportamiento masculino después de una ruptura. Cada respuesta que des me ayudará a entender exactamente qué está pasando con él.'
+      HOMBRE: 'Perfect. I\'m going to calibrate the analysis based on specific female behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with her.',
+      MUJER: 'Perfect. I\'m going to calibrate the analysis based on specific male behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with him.'
     },
     dataKey: 'gender',
   },
   {
     id: 2,
-    text: 'Entendido. Ahora, ¿cuánto tiempo ha pasado desde que se separaron?',
+    text: 'Understood. Now, how long has it been since you separated?',
     options: ['MENOS DE 1 SEMANA', '1-4 SEMANAS', '1-6 MESES', 'MÁS DE 6 MESES'],
-    response: 'Registrado.',
+    response: 'Logged.',
     responseByGender: {
-      HOMBRE: 'Registrado. El tiempo es crucial. En este período, el cerebro de ella pasa por fases químicas específicas. Cuanto más reciente la separación, más activa está la memoria emocional. Vamos a usar eso estratégicamente.',
-      MUJER: 'Registrado. El tiempo es crucial. En este período, el cerebro de él pasa por fases químicas específicas. Cuanto más reciente la separación, más activa está la memoria emocional. Vamos a usar eso estratégicamente.'
+      HOMBRE: 'Logged. Time is crucial. During this period, her brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.',
+      MUJER: 'Logged. Time is crucial. During this period, his brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.'
     },
     dataKey: 'timeSeparation',
   },
   {
     id: 3,
-    text: 'Bien. ¿Y cómo fue la separación? ¿Quién tomó la iniciativa?',
+    text: 'Got it. And how did the breakup happen? Who made the first move?',
     optionsByGender: {
       HOMBRE: ['ELLA TERMINÓ', 'YO TERMINÉ', 'DECISIÓN MUTUA'],
       MUJER: ['ÉL TERMINÓ', 'YO TERMINÉ', 'DECISIÓN MUTUA']
     },
-    response: 'Correcto.',
+    response: 'Correct.',
     responseByGender: {
-      HOMBRE: 'Entiendo. Cuando ella toma la decisión de terminar, significa que algo activó un "switch" emocional en su cerebro. La buena noticia: ese switch puede revertirse si sabes exactamente qué botones presionar. Y eso es lo que vamos a descubrir.',
-      MUJER: 'Entiendo. Cuando él toma la decisión de terminar, significa que algo activó un "switch" emocional en su cerebro. La buena noticia: ese switch puede revertirse si sabes exactamente qué botones presionar. Y eso es lo que vamos a descubrir.'
+      HOMBRE: 'I understand. When she makes the decision to end things, it means something triggered an emotional "switch" in her brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.',
+      MUJER: 'I understand. When he makes the decision to end things, it means something triggered an emotional "switch" in his brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.'
     },
     dataKey: 'whoEnded',
   },
   {
     id: 4,
-    text: 'Registrado. ¿Por cuánto tiempo estuvieron juntos?',
+    text: 'Logged. How long were you together?',
     options: ['MENOS DE 6 MESES', '6 MESES-1 AÑO', '1-3 AÑOS', 'MÁS DE 3 AÑOS'],
     response: 'Ok.',
     responseByGender: {
-      HOMBRE: 'Perfecto. El tiempo de relación define cuántas "anclas emocionales" creaste en su memoria. Cuanto más tiempo juntos, más profundas las conexiones neuronales. Eso trabaja a tu favor si usas el protocolo correcto.',
-      MUJER: 'Perfecto. El tiempo de relación define cuántas "anclas emocionales" creaste en su memoria. Cuanto más tiempo juntos, más profundas las conexiones neuronales. Eso trabaja a tu favor si usas el protocolo correcto.'
+      HOMBRE: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in her memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.',
+      MUJER: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in his memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.'
     },
     dataKey: 'relationshipDuration',
   },
   {
     id: 5,
-    text: '¿Cuál es tu situación actual con tu ex-pareja?',
+    text: 'What is your current situation with your ex?',
     options: ['CONTACTO CERO', 'ME IGNORA', 'BLOQUEADO', 'SÓLO TEMAS NECESARIOS', 'HABLAMOS A VECES', 'SOMOS AMIGOS', 'ENCUENTROS ÍNTIMOS'],
-    response: 'Analizando...',
+    response: 'Analyzing...',
     responseByGender: {
-      HOMBRE: 'Información clave. El nivel de contacto actual revela exactamente en qué fase emocional está ella. Cada escenario requiere un protocolo diferente. Si hay contacto cero, usamos una estrategia. Si hay comunicación, usamos otra completamente distinta.',
-      MUJER: 'Información clave. El nivel de contacto actual revela exactamente en qué fase emocional está él. Cada escenario requiere un protocolo diferente. Si hay contacto cero, usamos una estrategia. Si hay comunicación, usamos otra completamente distinta.'
+      HOMBRE: 'Key information. The current level of contact reveals exactly which emotional phase she\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.',
+      MUJER: 'Key information. The current level of contact reveals exactly which emotional phase he\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.'
     },
     dataKey: 'currentSituation',
   },
   {
     id: 6,
-    text: 'Analizando... Ahora, una información crucial: ¿tu ex-pareja ya está con otra persona?',
+    text: 'Analyzing... Now, a crucial piece of information: is your ex already with someone else?',
     optionsByGender: {
       HOMBRE: ['ESTÁ SOLTERA', 'NO ESTOY SEGURO', 'SALIENDO CASUAL', 'RELACIÓN SERIA', 'VARIAS PERSONAS'],
       MUJER: ['ESTÁ SOLTERO', 'NO ESTOY SEGURO', 'SALIENDO CASUAL', 'RELACIÓN SERIA', 'VARIAS PERSONAS']
     },
     response: 'Crucial.',
     responseByGender: {
-      HOMBRE: 'Entendido. Esto cambia el mapa, pero no el destino. Incluso si ella está con alguien, hay protocolos psicológicos específicos que funcionan. De hecho, en algunos casos, esto puede ser usado estratégicamente a tu favor.',
-      MUJER: 'Entendido. Esto cambia el mapa, pero no el destino. Incluso si él está con alguien, hay protocolos psicológicos específicos que funcionan. De hecho, en algunos casos, esto puede ser usado estratégicamente a tu favor.'
+      HOMBRE: 'Understood. This changes the map, but not the destination. Even if she\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.',
+      MUJER: 'Understood. This changes the map, but not the destination. Even if he\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.'
     },
     dataKey: 'exSituation',
   },
   {
     id: 7,
-    text: 'Última pregunta para finalizar el análisis: en una escala de 1 a 4, ¿cuánto quieres recuperar esta relación?',
+    text: 'Last question to complete the analysis: on a scale of 1 to 4, how much do you want to get this relationship back?',
     optionsByGender: {
       HOMBRE: ['1 - NO ESTOY SEGURO', '2 - LO ESTOY CONSIDERANDO', '3 - LO QUIERO MUCHO', '4 - LO QUIERO CON TODA MI ALMA'],
       MUJER: ['1 - NO ESTOY SEGURA', '2 - LO ESTOY CONSIDERANDO', '3 - LO QUIERO MUCHO', '4 - LO QUIERO CON TODA MI ALMA']
     },
-    response: '¡Análisis completo!',
+    response: 'Analysis complete!',
     responseByGender: {
-      HOMBRE: '¡Análisis completo! Tu nivel de compromiso define la intensidad del protocolo. Cuanto más comprometido estés, más poderosas serán las técnicas que voy a revelarte. Ahora tengo todo lo que necesito para mostrarte el camino exacto para reconquistar a ella.',
-      MUJER: '¡Análisis completo! Tu nivel de compromiso define la intensidad del protocolo. Cuanto más comprometida estés, más poderosas serán las técnicas que voy a revelarte. Ahora tengo todo lo que necesito para mostrarte el camino exacto para reconquistar a él.'
+      HOMBRE: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning her back.',
+      MUJER: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning him back.'
     },
     dataKey: 'commitmentLevel',
   }
@@ -166,7 +166,7 @@ export default function Chat({ onNavigate }: ChatProps) {
 
     const initialMessage: Message = {
       type: 'bot',
-      text: 'Hola. Soy Sophia Sanchez, especialista en reconquista mediante psicología conductual. Mi sistema detectó tu búsqueda de respuestas. Estoy aquí para analizar tu caso.',
+      text: 'Hello. I\'m Sophia Sanchez, a specialist in reconnection through behavioral psychology. My system detected your search for answers. I\'m here to analyze your case.',
       isTyping: true,
     };
 
@@ -266,7 +266,7 @@ export default function Chat({ onNavigate }: ChatProps) {
           setTimeout(() => {
             const finalMessage: Message = {
               type: 'bot',
-              text: 'Análisis concluido. Tu plan personalizado está listo para ser revelado. Haz clic abajo para accederlo.',
+              text: 'Analysis complete. Your personalized plan is ready to be revealed. Click below to access it.',
               isTyping: true,
             };
             setMessages(prev => [...prev, finalMessage]);
@@ -307,8 +307,8 @@ export default function Chat({ onNavigate }: ChatProps) {
         <div className="progress-bar">
           <div className="progress-fill" style={{ width: `${progress}%` }}></div>
         </div>
-        <p className="progress-text">ANÁLISIS: {Math.round(progress)}%</p>
-        {isProcessing && <p className="processing-text">ANALIZANDO DATOS...</p>}
+        <p className="progress-text">ANALYSIS: {Math.round(progress)}%</p>
+        {isProcessing && <p className="processing-text">ANALYZING DATA...</p>}
       </div>
 
       <div className="chat-messages">
@@ -336,7 +336,7 @@ export default function Chat({ onNavigate }: ChatProps) {
         {showOptions && currentQuestion === -1 && (
           <div className="options-container">
             <button className="option-button" onClick={handleStartAnalysis}>
-              EMPEZAR ANÁLISIS
+              START ANALYSIS
             </button>
           </div>
         )}
@@ -386,9 +386,9 @@ export default function Chat({ onNavigate }: ChatProps) {
               </div>
             </div>
             <button className="option-button cta-final" onClick={handleViewPlan}>
-              VER MI PLAN PERSONALIZADO
+              VIEW MY PERSONALIZED PLAN
             </button>
-            <p className="completion-count">+9.247 planes revelados</p>
+            <p className="completion-count">+9,247 plans revealed</p>
           </div>
         )}
 
