@@ -1874,7 +1874,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                             }}>
 
-                                                Mateo R.
+                                                Matt R.
 
                                             </strong>
 
@@ -1886,7 +1886,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                             }}>
 
-                                                • Buenos Aires, Argentina • 4 days ago
+                                                • Los Angeles, USA • 4 days ago
 
                                             </span>
 
@@ -2002,7 +2002,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                             }}>
 
-                                                Pablo S.
+                                                Paul S.
 
                                             </strong>
 
@@ -2014,7 +2014,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                             }}>
 
-                                                • Madrid, Spain • Yesterday
+                                                • London, UK • Yesterday
 
                                             </span>
 
