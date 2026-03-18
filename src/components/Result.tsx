@@ -792,7 +792,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                         <img 
 
-                            src="https://i.ibb.co/HLP8bhz4/Design-sem-nome-1.png" 
+                            src="https://i.ibb.co/JFyTxZkm/123.png" 
 
                             alt="72h Window - Scientific Foundation" 
 
