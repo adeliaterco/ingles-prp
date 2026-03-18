@@ -792,7 +792,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                         <img 
 
-                            src="https://comprarplanseguro.shop/wp-content/uploads/2025/10/imagem3-nova.webp" 
+                            src="https://i.ibb.co/7tyk6kQy/mentioned-in-a05a2007-1.webp" 
 
                             alt="72h Window - Scientific Foundation" 
 
