@@ -20,13 +20,13 @@ interface Question {
   text: string;
   options?: string[];
   optionsByGender?: {
-    HOMBRE: string[];
-    MUJER: string[];
+    MALE: string[];
+    FEMALE: string[];
   };
   response: string;
   responseByGender?: {
-    HOMBRE: string;
-    MUJER: string;
+    MALE: string;
+    FEMALE: string;
   };
   dataKey: 'gender' | 'timeSeparation' | 'whoEnded' | 'relationshipDuration' | 'currentSituation' | 'exSituation' | 'commitmentLevel';
 }
@@ -35,22 +35,22 @@ const QUESTIONS: Question[] = [
   {
     id: 1,
     text: 'To calibrate the analysis, I need to know: what is your gender?',
-    options: ['HOMBRE', 'MUJER'],
+    options: ['MALE', 'FEMALE'],
     response: 'Understood.',
     responseByGender: {
-      HOMBRE: 'Perfect. I\'m going to calibrate the analysis based on specific female behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with her.',
-      MUJER: 'Perfect. I\'m going to calibrate the analysis based on specific male behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with him.'
+      MALE: 'Perfect. I\'m going to calibrate the analysis based on specific female behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with her.',
+      FEMALE: 'Perfect. I\'m going to calibrate the analysis based on specific male behavioral patterns after a breakup. Every answer you give will help me understand exactly what\'s going on with him.'
     },
     dataKey: 'gender',
   },
   {
     id: 2,
     text: 'Understood. Now, how long has it been since you separated?',
-    options: ['MENOS DE 1 SEMANA', '1-4 SEMANAS', '1-6 MESES', 'MÁS DE 6 MESES'],
+    options: ['LESS THAN 1 WEEK', '1-4 WEEKS', '1-6 MONTHS', 'MORE THAN 6 MONTHS'],
     response: 'Logged.',
     responseByGender: {
-      HOMBRE: 'Logged. Time is crucial. During this period, her brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.',
-      MUJER: 'Logged. Time is crucial. During this period, his brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.'
+      MALE: 'Logged. Time is crucial. During this period, her brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.',
+      FEMALE: 'Logged. Time is crucial. During this period, his brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.'
     },
     dataKey: 'timeSeparation',
   },
@@ -58,35 +58,35 @@ const QUESTIONS: Question[] = [
     id: 3,
     text: 'Got it. And how did the breakup happen? Who made the first move?',
     optionsByGender: {
-      HOMBRE: ['ELLA TERMINÓ', 'YO TERMINÉ', 'DECISIÓN MUTUA'],
-      MUJER: ['ÉL TERMINÓ', 'YO TERMINÉ', 'DECISIÓN MUTUA']
+      MALE: ['SHE ENDED IT', 'I ENDED IT', 'MUTUAL DECISION'],
+      FEMALE: ['HE ENDED IT', 'I ENDED IT', 'MUTUAL DECISION']
     },
     response: 'Correct.',
     responseByGender: {
-      HOMBRE: 'I understand. When she makes the decision to end things, it means something triggered an emotional "switch" in her brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.',
-      MUJER: 'I understand. When he makes the decision to end things, it means something triggered an emotional "switch" in his brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.'
+      MALE: 'I understand. When she makes the decision to end things, it means something triggered an emotional "switch" in her brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.',
+      FEMALE: 'I understand. When he makes the decision to end things, it means something triggered an emotional "switch" in his brain. The good news: that switch can be reversed if you know exactly which buttons to press. And that\'s what we\'re going to find out.'
     },
     dataKey: 'whoEnded',
   },
   {
     id: 4,
     text: 'Logged. How long were you together?',
-    options: ['MENOS DE 6 MESES', '6 MESES-1 AÑO', '1-3 AÑOS', 'MÁS DE 3 AÑOS'],
+    options: ['LESS THAN 6 MONTHS', '6 MONTHS-1 YEAR', '1-3 YEARS', 'MORE THAN 3 YEARS'],
     response: 'Ok.',
     responseByGender: {
-      HOMBRE: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in her memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.',
-      MUJER: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in his memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.'
+      MALE: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in her memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.',
+      FEMALE: 'Perfect. The length of the relationship defines how many "emotional anchors" you created in his memory. The longer you were together, the deeper the neural connections. That works in your favor if you use the right protocol.'
     },
     dataKey: 'relationshipDuration',
   },
   {
     id: 5,
     text: 'What is your current situation with your ex?',
-    options: ['CONTACTO CERO', 'ME IGNORA', 'BLOQUEADO', 'SÓLO TEMAS NECESARIOS', 'HABLAMOS A VECES', 'SOMOS AMIGOS', 'ENCUENTROS ÍNTIMOS'],
+    options: ['ZERO CONTACT', 'IGNORING ME', 'BLOCKED', 'NECESSARY TOPICS ONLY', 'WE TALK SOMETIMES', 'WE ARE FRIENDS', 'INTIMATE ENCOUNTERS'],
     response: 'Analyzing...',
     responseByGender: {
-      HOMBRE: 'Key information. The current level of contact reveals exactly which emotional phase she\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.',
-      MUJER: 'Key information. The current level of contact reveals exactly which emotional phase he\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.'
+      MALE: 'Key information. The current level of contact reveals exactly which emotional phase she\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.',
+      FEMALE: 'Key information. The current level of contact reveals exactly which emotional phase he\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.'
     },
     dataKey: 'currentSituation',
   },
@@ -94,13 +94,13 @@ const QUESTIONS: Question[] = [
     id: 6,
     text: 'Analyzing... Now, a crucial piece of information: is your ex already with someone else?',
     optionsByGender: {
-      HOMBRE: ['ESTÁ SOLTERA', 'NO ESTOY SEGURO', 'SALIENDO CASUAL', 'RELACIÓN SERIA', 'VARIAS PERSONAS'],
-      MUJER: ['ESTÁ SOLTERO', 'NO ESTOY SEGURO', 'SALIENDO CASUAL', 'RELACIÓN SERIA', 'VARIAS PERSONAS']
+      MALE: ['SHE\'S SINGLE', 'I\'M NOT SURE', 'CASUALLY DATING', 'SERIOUS RELATIONSHIP', 'MULTIPLE PEOPLE'],
+      FEMALE: ['HE\'S SINGLE', 'I\'M NOT SURE', 'CASUALLY DATING', 'SERIOUS RELATIONSHIP', 'MULTIPLE PEOPLE']
     },
     response: 'Crucial.',
     responseByGender: {
-      HOMBRE: 'Understood. This changes the map, but not the destination. Even if she\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.',
-      MUJER: 'Understood. This changes the map, but not the destination. Even if he\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.'
+      MALE: 'Understood. This changes the map, but not the destination. Even if she\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.',
+      FEMALE: 'Understood. This changes the map, but not the destination. Even if he\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.'
     },
     dataKey: 'exSituation',
   },
@@ -108,13 +108,13 @@ const QUESTIONS: Question[] = [
     id: 7,
     text: 'Last question to complete the analysis: on a scale of 1 to 4, how much do you want to get this relationship back?',
     optionsByGender: {
-      HOMBRE: ['1 - NO ESTOY SEGURO', '2 - LO ESTOY CONSIDERANDO', '3 - LO QUIERO MUCHO', '4 - LO QUIERO CON TODA MI ALMA'],
-      MUJER: ['1 - NO ESTOY SEGURA', '2 - LO ESTOY CONSIDERANDO', '3 - LO QUIERO MUCHO', '4 - LO QUIERO CON TODA MI ALMA']
+      MALE: ['1 - I\'M NOT SURE', '2 - I\'M CONSIDERING IT', '3 - I REALLY WANT IT', '4 - I WANT IT WITH ALL MY HEART'],
+      FEMALE: ['1 - I\'M NOT SURE', '2 - I\'M CONSIDERING IT', '3 - I REALLY WANT IT', '4 - I WANT IT WITH ALL MY HEART']
     },
     response: 'Analysis complete!',
     responseByGender: {
-      HOMBRE: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning her back.',
-      MUJER: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning him back.'
+      MALE: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning her back.',
+      FEMALE: 'Analysis complete! Your level of commitment defines the intensity of the protocol. The more committed you are, the more powerful the techniques I\'m going to reveal to you. I now have everything I need to show you the exact path to winning him back.'
     },
     dataKey: 'commitmentLevel',
   }
@@ -240,7 +240,7 @@ export default function Chat({ onNavigate }: ChatProps) {
       let responseText = question.response;
       
       if (question.responseByGender && quizData.gender) {
-        const gender = quizData.gender as 'HOMBRE' | 'MUJER';
+        const gender = quizData.gender as 'MALE' | 'FEMALE';
         responseText = question.responseByGender[gender] || question.response;
       }
 
@@ -291,7 +291,7 @@ export default function Chat({ onNavigate }: ChatProps) {
     const quizData = storage.getQuizData();
     
     if (question.optionsByGender && quizData.gender) {
-      const gender = quizData.gender as 'HOMBRE' | 'MUJER';
+      const gender = quizData.gender as 'MALE' | 'FEMALE';
       return question.optionsByGender[gender] || question.options || [];
     }
     
@@ -374,7 +374,7 @@ export default function Chat({ onNavigate }: ChatProps) {
                 textAlign: 'center',
                 lineHeight: '1.3'
               }}>
-                {getCompletionBadge(quizData.gender || 'HOMBRE').title}
+                {getCompletionBadge(quizData.gender || 'MALE').title}
               </div>
               <div style={{
                 fontSize: 'clamp(1rem, 4vw, 1.25rem)',
@@ -382,7 +382,7 @@ export default function Chat({ onNavigate }: ChatProps) {
                 lineHeight: '1.6',
                 textAlign: 'center'
               }}>
-                {getCompletionBadge(quizData.gender || 'HOMBRE').subtitle}
+                {getCompletionBadge(quizData.gender || 'MALE').subtitle}
               </div>
             </div>
             <button className="option-button cta-final" onClick={handleViewPlan}>

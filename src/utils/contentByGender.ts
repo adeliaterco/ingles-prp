@@ -5,13 +5,13 @@ import { QuizData } from '../types/quiz';
 // 
 
 export function getTitle(gender: string): string {
-    return gender === 'HOMBRE' 
+    return gender === 'MALE' 
         ? 'Why She Left' 
         : 'Why He Left';
 }
 
 export function getLoadingMessage(gender: string): string {
-    return gender === 'HOMBRE'
+    return gender === 'MALE'
         ? 'Generating your specific protocol to win her back...'
         : 'Generating your specific protocol to win him back...';
 }
@@ -21,8 +21,8 @@ export function getLoadingMessage(gender: string): string {
  * Transforma os dados do quiz em una narrativa de autoridade e empatia.
  */
 export function getCopy(quizData: QuizData): string {
-    const pronoun = quizData.gender === 'HOMBRE' ? 'ella' : 'él';
-    const exPronoun = quizData.gender === 'HOMBRE' ? 'Ella' : 'Él';
+    const pronoun = quizData.gender === 'MALE' ? 'her' : 'him';
+    const exPronoun = quizData.gender === 'MALE' ? 'She' : 'He';
     
     const whoEnded = quizData.whoEnded || '';
     const timeSeparation = quizData.timeSeparation || '';
@@ -35,15 +35,15 @@ export function getCopy(quizData: QuizData): string {
     let intro = '';
     
     // Case 1: SHE/HE ENDED IT
-    if (whoEnded.includes('ELLA TERMINÓ') || whoEnded.includes('ÉL TERMINÓ')) {
+    if (whoEnded.includes('SHE ENDED IT') || whoEnded.includes('HE ENDED IT')) {
         intro = `Based on the fact that ${exPronoun} decided to end the relationship, we understand there was a deterioration in the "value switches" that ${pronoun} perceived in you. `;
     } 
     // Case 2: I ENDED IT
-    else if (whoEnded.includes('YO TERMINÉ')) {
+    else if (whoEnded.includes('I ENDED IT')) {
         intro = `Considering that you were the one who ended things, the challenge now is to reverse the feeling of rejection that ${pronoun} processed, turning it into a new opportunity. `;
     }
     // Case 3: MUTUAL DECISION
-    else if (whoEnded.includes('DECISIÓN MUTUA')) {
+    else if (whoEnded.includes('MUTUAL DECISION')) {
         intro = `Considering the decision was mutual, the challenge now is to identify whether genuine interest still exists on both sides and rebuild attraction from scratch. `;
     }
     // Case 4: FALLBACK (unexpected or empty value)
@@ -55,11 +55,11 @@ export function getCopy(quizData: QuizData): string {
     // 2. URGENCY LOGIC (TIME SINCE SEPARATION) - IMPROVED
     // 
     let urgency = '';
-    if (timeSeparation.includes('MENOS DE 1 SEMANA') || timeSeparation.includes('1-4 SEMANAS')) {
+    if (timeSeparation.includes('LESS THAN 1 WEEK') || timeSeparation.includes('1-4 WEEKS')) {
         urgency = `You're in the **IDEAL time window**. ${exPronoun}'s brain still has chemical traces of your presence, which makes reconnection easier if you act now. `;
-    } else if (timeSeparation.includes('1-6 MESES')) {
+    } else if (timeSeparation.includes('1-6 MONTHS')) {
         urgency = `Even though time has passed (${timeSeparation}), neuroscience explains that emotional memories can be reactivated through the right stimuli. `;
-    } else if (timeSeparation.includes('MÁS DE 6 MESES')) {
+    } else if (timeSeparation.includes('MORE THAN 6 MONTHS')) {
         urgency = `Even though time has passed (${timeSeparation}), neuroscience explains that emotional memories can be reactivated through the right stimuli. `;
     }
 
@@ -67,7 +67,7 @@ export function getCopy(quizData: QuizData): string {
     // 3. CONTACT LOGIC (CURRENT SITUATION) - IMPROVED
     // 
     let insight = '';
-    if (currentSituation.includes('CONTACTO CERO') || currentSituation.includes('ME IGNORA') || currentSituation.includes('BLOQUEADO')) {
+    if (currentSituation.includes('ZERO CONTACT') || currentSituation.includes('IGNORING ME') || currentSituation.includes('BLOCKED')) {
         insight = `The fact that there's no contact is, ironically, your greatest advantage. We're in the "cortisol peak cleansing" phase, preparing the ground for a powerful comeback. `;
     } else {
         insight = `The current contact indicates the emotional thread hasn't been cut, but we must be careful not to saturate their dopamine system with desperation. `;
@@ -94,7 +94,7 @@ The key is not to beg, but to understand ${pronoun}'s psychology and act strateg
 
 // ✅ INSTRUÇÃO #9: Sumário rápido + Instrução #6: Explicação da importância
 export function getVentana72Copy(gender: string): string {
-    const pronoun = gender === 'HOMBRE' ? 'ella' : 'él';
+    const pronoun = gender === 'MALE' ? 'her' : 'him';
     
     return `It doesn't matter if you separated 3 days ago or 3 months ago.
 
@@ -139,15 +139,15 @@ export function getVentanaImportance(): string[] {
 }
 
 export function getOfferTitle(gender: string): string {
-    return gender === 'HOMBRE'
+    return gender === 'MALE'
         ? 'Your Plan to Win Her Back'
         : 'Your Plan to Win Him Back';
 }
 
 export function getFeatures(gender: string): string[] {
-    const pronoun = gender === 'HOMBRE' ? 'Her' : 'Him';
-    const pronounLower = gender === 'HOMBRE' ? 'her' : 'him';
-    const another = gender === 'HOMBRE' ? 'someone else' : 'someone else';
+    const pronoun = gender === 'MALE' ? 'Her' : 'Him';
+    const pronounLower = gender === 'MALE' ? 'her' : 'him';
+    const another = 'someone else';
     
     return [
         `📱 MODULE 1: How to Talk to ${pronoun} (Days 1–7)`,
@@ -161,13 +161,13 @@ export function getFeatures(gender: string): string[] {
 }
 
 export function getCTA(gender: string): string {
-    return gender === 'HOMBRE'
+    return gender === 'MALE'
         ? 'YES, I WANT MY PLAN TO WIN HER BACK'
         : 'YES, I WANT MY PLAN TO WIN HIM BACK';
 }
 
 export function getCompletionBadge(gender: string): { title: string; subtitle: string } {
-    const pronoun = gender === 'HOMBRE' ? 'she' : 'he';
+    const pronoun = gender === 'MALE' ? 'she' : 'he';
     
     return {
         title: 'YOUR ANALYSIS IS READY!',
@@ -183,9 +183,9 @@ export function getFaseText(gender: string, fase: number): {
     bullets: string[];
     warning: string;
 } {
-    const pronoun = gender === 'HOMBRE' ? 'She' : 'He';
-    const pronounLower = gender === 'HOMBRE' ? 'her' : 'him';
-    const oppositeGender = gender === 'HOMBRE' ? 'him' : 'her';
+    const pronoun = gender === 'MALE' ? 'She' : 'He';
+    const pronounLower = gender === 'MALE' ? 'her' : 'him';
+    const oppositeGender = gender === 'MALE' ? 'him' : 'her';
     
     const fases: Record<number, { title: string; timeRange: string; summary: string; bullets: string[]; warning: string }> = {
         1: {
