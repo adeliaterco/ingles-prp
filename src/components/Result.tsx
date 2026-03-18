@@ -324,17 +324,17 @@ export default function Result({ onNavigate }: ResultProps) {
 
                     <div style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; aspect-ratio: 9 / 16; background: #000; border-radius: 8px; overflow: hidden;">
 
-                        <vturb-smartplayer id="vid-69b38597faf9397e2331fc28" style="display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></vturb-smartplayer>
+                        <vturb-smartplayer id="vid-69bae583891545b57a92ba0b" style="display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></vturb-smartplayer>
 
                     </div>
 
                 `;
 
-                if (!document.querySelector('script[src*="69b38597faf9397e2331fc28"]')) {
+                if (!document.querySelector('script[src*="69bae583891545b57a92ba0b"]')) {
 
                     const s = document.createElement("script");
 
-                    s.src = "https://scripts.converteai.net/52018b5b-3f47-42a3-b3df-1e325329b52a/players/69b38597faf9397e2331fc28/v4/player.js";
+                    s.src = "https://scripts.converteai.net/52018b5b-3f47-42a3-b3df-1e325329b52a/players/69bae583891545b57a92ba0b/v4/player.js";
 
                     s.async = true;
 
