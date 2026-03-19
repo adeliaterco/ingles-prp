@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
     // ========================================
     // ✅ GOOGLE TAG MANAGER WEB (DIRETO DO GOOGLE)
     // ========================================
-    const gtmId = 'GTM-T8M558NG';
+    const gtmId = 'GTM-M8B5WFKT';
     
     // ✅ CRIAR E INSERIR SCRIPT DO GTM
     const gtmScript = document.createElement('script');
@@ -91,7 +91,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* GTM NoScript (fallback) */}
       <noscript>
         <iframe 
-          src="https://www.googletagmanager.com/ns.html?id=GTM-T8M558NG"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-M8B5WFKT"
           height="0" 
           width="0" 
           style={{ display: 'none', visibility: 'hidden' }}
