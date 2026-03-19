@@ -166,7 +166,7 @@ export default function Chat({ onNavigate }: ChatProps) {
 
     const initialMessage: Message = {
       type: 'bot',
-      text: 'Hello. I\'m Sophia Sanchez, a specialist in reconnection through behavioral psychology. My system detected your search for answers. I\'m here to analyze your case.',
+      text: 'Hello. I\'m Sara Mithell, a specialist in reconnection through behavioral psychology. My system detected your search for answers. I\'m here to analyze your case.',
       isTyping: true,
     };
 
