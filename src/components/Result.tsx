@@ -1390,7 +1390,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                         <div style={{ fontSize: 'clamp(0.9rem, 3.5vw, 1.05rem)', color: 'rgba(255,255,255,0.4)' }}>❌ Module 4: Emergency Protocol</div>
 
-                                        <div style={{ fontSize: 'clamp(0.9rem, 3.5vw, 1.05rem)', color: 'rgba(255,255,255,0.4)' }}>❌ Priority WhatsApp Support</div>
+                                        <div style={{ fontSize: 'clamp(0.9rem, 3.5vw, 1.05rem)', color: 'rgba(255,255,255,0.4)' }}>❌ Priority Direct Support 24/7</div>
 
                                         <div style={{ fontSize: 'clamp(0.9rem, 3.5vw, 1.05rem)', color: 'rgba(255,255,255,0.4)' }}>❌ Private Community</div>
 
@@ -1608,7 +1608,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                                         <div style={{ fontSize: 'clamp(0.95rem, 3.8vw, 1.1rem)', color: '#4ade80', fontWeight: '700' }}>🔥 Module 4: Emergency Protocol</div>
 
-                                        <div style={{ fontSize: 'clamp(0.95rem, 3.8vw, 1.1rem)', color: '#4ade80', fontWeight: '700' }}>🔥 Priority WhatsApp Support 24/7</div>
+                                        <div style={{ fontSize: 'clamp(0.95rem, 3.8vw, 1.1rem)', color: '#4ade80', fontWeight: '700' }}>🔥 Priority Direct Support 24/7</div>
 
                                         <div style={{ fontSize: 'clamp(0.95rem, 3.8vw, 1.1rem)', color: '#4ade80', fontWeight: '700' }}>🔥 Private Support Community</div>
 
