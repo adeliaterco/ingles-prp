@@ -676,7 +676,7 @@ export default function Result({ onNavigate }: ResultProps) {
 
                         <div className="revelation-header">
 
-                            <h2>Now there's just one more step to get back the woman you love.</h2>
+                            <h2>Now there's just one more step to win back the one you love.".</h2>
 
                         </div>
 
