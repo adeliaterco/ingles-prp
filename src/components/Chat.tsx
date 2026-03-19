@@ -45,18 +45,18 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 2,
-    text: 'Understood. Now, how long has it been since you separated?',
+    text: 'Understood. Now, how long has it been since you two broke up?',
     options: ['LESS THAN 1 WEEK', '1-4 WEEKS', '1-6 MONTHS', 'MORE THAN 6 MONTHS'],
     response: 'Logged.',
     responseByGender: {
-      MALE: 'Logged. Time is crucial. During this period, her brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.',
-      FEMALE: 'Logged. Time is crucial. During this period, his brain goes through specific chemical phases. The more recent the breakup, the more active the emotional memory. We\'re going to use that strategically.'
+      MALE: 'Logged. Time is crucial. During this period, her brain goes through specific chemical phases. The more recent the breakup, the more active emotional memory becomes. We\'re going to use that strategically.',
+      FEMALE: 'Logged. Time is crucial. During this period, his brain goes through specific chemical phases. The more recent the breakup, the more active emotional memory becomes. We\'re going to use that strategically.'
     },
     dataKey: 'timeSeparation',
   },
   {
     id: 3,
-    text: 'Got it. And how did the breakup happen? Who made the first move?',
+    text: 'Got it. And how did the breakup happen? Who ended the relationship?',
     optionsByGender: {
       MALE: ['SHE ENDED IT', 'I ENDED IT', 'MUTUAL DECISION'],
       FEMALE: ['HE ENDED IT', 'I ENDED IT', 'MUTUAL DECISION']
@@ -82,7 +82,7 @@ const QUESTIONS: Question[] = [
   {
     id: 5,
     text: 'What is your current situation with your ex?',
-    options: ['ZERO CONTACT', 'IGNORING ME', 'BLOCKED', 'NECESSARY TOPICS ONLY', 'WE TALK SOMETIMES', 'WE ARE FRIENDS', 'INTIMATE ENCOUNTERS'],
+    options: ['ZERO CONTACT', 'IGNORING ME', 'BLOCKED', 'ONLY ESSENTIAL TOPICS', 'WE TALK SOMETIMES', 'WE ARE FRIENDS', 'INTIMATE ENCOUNTERS'],
     response: 'Analyzing...',
     responseByGender: {
       MALE: 'Key information. The current level of contact reveals exactly which emotional phase she\'s in. Each scenario requires a different protocol. If there\'s zero contact, we use one strategy. If there\'s communication, we use a completely different one.',
@@ -99,14 +99,14 @@ const QUESTIONS: Question[] = [
     },
     response: 'Crucial.',
     responseByGender: {
-      MALE: 'Understood. This changes the map, but not the destination. Even if she\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.',
-      FEMALE: 'Understood. This changes the map, but not the destination. Even if he\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.'
+      MALE: 'Understood. The path changed, but the destination is still the same. Even if she\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.',
+      FEMALE: 'Understood. The path changed, but the destination is still the same. Even if he\'s with someone, there are specific psychological protocols that work. In fact, in some cases, this can be used strategically to your advantage.'
     },
     dataKey: 'exSituation',
   },
   {
     id: 7,
-    text: 'Last question to complete the analysis: on a scale of 1 to 4, how much do you want to get this relationship back?',
+    text: 'Last question to complete the analysis: on a scale of 1 to 4, how much do you want to get your ex back?',
     optionsByGender: {
       MALE: ['1 - I\'M NOT SURE', '2 - I\'M CONSIDERING IT', '3 - I REALLY WANT IT', '4 - I WANT IT WITH ALL MY HEART'],
       FEMALE: ['1 - I\'M NOT SURE', '2 - I\'M CONSIDERING IT', '3 - I REALLY WANT IT', '4 - I WANT IT WITH ALL MY HEART']
