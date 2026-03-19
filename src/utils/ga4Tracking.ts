@@ -43,7 +43,7 @@ class GA4Tracking {
   // 
 
   landingPageView() {
-    this.sendEvent('page_view', {
+    this.sendEvent('page_view_landing', {
       page_title: 'Landing Page',
       page_location: window.location.href,
       page_path: '/'
@@ -70,7 +70,7 @@ class GA4Tracking {
   // 
 
   chatPageView() {
-    this.sendEvent('page_view', {
+    this.sendEvent('page_view_chat', {
       page_title: 'Chat Analysis',
       page_location: window.location.href,
       page_path: '/chat'
@@ -111,7 +111,7 @@ class GA4Tracking {
   // 
 
   resultPageView() {
-    this.sendEvent('page_view', {
+    this.sendEvent('page_view_resultado', {
       page_title: 'Result Page',
       page_location: window.location.href,
       page_path: '/resultado'
